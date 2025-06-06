@@ -27,3 +27,55 @@ jobs:
       - name: Create serialized object
         run: |
           python -c "from main import serilaze_object; serilaze_object()"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: serialized-object
+          path: ./object.pkl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
