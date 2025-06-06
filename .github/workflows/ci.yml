@@ -3,8 +3,8 @@ name: Python CI
 on:
   push:
     branches:
-      - main 
-      
+      - master 
+
 jobs:
   test-and-serialize:
     runs-on: ubuntu-latest
