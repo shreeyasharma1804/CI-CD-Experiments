@@ -1,0 +1,29 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main 
+      
+jobs:
+  test-and-serialize:
+    runs-on: ubuntu-latest
+
+    container:
+      image: python:3.10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pip install pytest
+
+      - name: Run tests
+        run: |
+          pytest
+
+      - name: Create serialized object
+        run: |
+          python -c "from main import serilaze_object; serilaze_object()"
